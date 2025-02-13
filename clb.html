@@ -185,6 +185,91 @@
       opacity: 1;
       transform: translateY(0);
     }
+    .footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      height: 30vh;
+      background: #0370d7;
+      text-align: center;
+      color: #fff;
+      font-size: 20px;
+      position: relative;
+    }
+
+    .footer .school-name {
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+
+    .footer img {
+      width: 100px; 
+      height: auto;
+    }
+
+    .footer .footer-links {
+      position: absolute;
+      top: 20%;
+      left: 20%;
+      display: flex;
+      justify-content: space-between;
+      width: calc(100% - 40px);
+    }
+
+    .footer .footer-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 25px; 
+    }
+
+    .footer .copyright {
+      position: absolute;
+      top: 20%;
+      right: 20%;
+      font-size: 25px;
+    }
+    .khu-thong-tin {
+      text-align: center;
+      padding: 40px 0;
+    }
+
+    .khu-thong-tin h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #0055a5;
+    }
+
+    .khu-thong-tin .cot {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+    }
+
+    .khu-thong-tin .cot .noi-dung {
+      flex: 1;
+      padding: 20px;
+      background: #f1f1f1;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      cursor: pointer; /* Thêm con trỏ chuột để người dùng biết rằng có thể nhấp vào */
+    }
+
+    .khu-thong-tin .cot .noi-dung p {
+      font-size: 1.5rem;
+      color: #0055a5;
+      font-weight: bold;
+    }
+
+    .khu-thong-tin .cot .noi-dung:hover {
+      background-color: #e0f0ff; /* Màu nền thay đổi khi hover */
+    }
+
+    .khu-thong-tin .cot .noi-dung:hover p {
+      text-decoration: underline;
+    }
+
   </style>
 </head>
 <body>
@@ -261,6 +346,30 @@
       </div>
     </div>
   </section>
+  <section class="khu-thong-tin">
+    <h2>Thông Tin CLB</h2>
+    <div class="cot">
+      <div class="noi-dung" onclick="window.location.href='thethao.html';">
+        <p>Câu Lạc Bộ Thể Thao</p>
+      </div>
+      <div class="noi-dung" onclick="window.location.href='nghethuat.html';">
+        <p>Câu Lạc Bộ Nghệ Thuật</p>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  <div class="footer">
+    <div class="footer-links">
+      <a href="/members">Danh Sách Thành Viên</a> 
+    </div>
+    
+    <div class="school-name">Ngô Văn Cấn High School</div>
+    <img src="data/logo.jpg" alt="Logo">
+    
+    <div class="copyright">Copyright © 2025 Nhóm 8 C3.22</div>
+  </div>
   <script>
     let lastScroll = 0;
     const navbar = document.getElementById('navbar');
